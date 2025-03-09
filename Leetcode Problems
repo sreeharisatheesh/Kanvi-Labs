@@ -1,1 +1,22 @@
-#Leetcode problems
+Leetcode problems
+
+#3131 problem
+class Solution:
+    def addedInteger(self, nums1: List[int], nums2: List[int]) -> int:
+        nums1.sort()
+        nums2.sort()
+        return (nums2[0] - nums1[0])
+
+
+#3069 problem
+class Solution:
+    def resultArray(self, nums: List[int]) -> List[int]:
+        arr1 ,arr2 = [] , []
+        arr1.append(nums[0])
+        arr2.append(nums[1])
+        for i in nums[2:]:
+            if arr1[-1] > arr2[-1]:
+                arr1.append(i)
+            else:
+                arr2.append(i)
+        return arr1 + arr2
