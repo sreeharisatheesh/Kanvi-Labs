@@ -20,3 +20,15 @@ class Solution:
             else:
                 arr2.append(i)
         return arr1 + arr2
+
+
+#2529
+class Solution:
+    def maximumCount(self, nums: List[int]) -> int:
+        dict = {"N":0 , "P":0}
+        for i in nums:
+            if i>0:
+                dict['P']+=1
+            elif i<0:
+                dict['N']+=1
+        return max(dict["P"],dict["N"])
