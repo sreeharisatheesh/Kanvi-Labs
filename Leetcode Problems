@@ -45,3 +45,12 @@ class Solution:
             prev2, prev1 = prev1, current  
 
         return min(prev1, prev2)
+
+
+#2160
+class Solution:
+    def minimumSum(self, num: int) -> int:
+        list1 = list(str(num))
+        print(list1)
+        list1.sort()
+        return (int(list1[0]+list1[-1]) + int(list1[1] + list1[-2]))
